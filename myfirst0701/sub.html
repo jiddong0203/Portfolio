@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동대문 엽기 떡볶이</title>
+  <link type="text/css" rel="stylesheet" href="css/reset.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/oridomi.min.js"></script>
+  <script src="js/sticker.min.js"></script>
+  <script>
+    $(document).ready(function(){ //start
+      
+        var folded = new OriDomi('.paper', {
+          vPanels:          10,     // number of panels when folding left or right (vertically oriented)
+          hPanels:          3,     // number of panels when folding top or bottom
+          speed:            1200,  // folding duration in ms
+          ripple:           2,     // backwards ripple effect when animating
+          shadingIntensity: .5,    // lessen the shading effect
+          perspective:      800,   // smaller values exaggerate 3D distortion
+          maxAngle:         40,    // keep the user's folds within a range of -40 to 40 degrees
+          shading:          'soft' // change the shading type
+        });
+        folded.foldUp(30);
+
+        $('.open').click(function(){
+          folded.unfold();
+        });
+        $('.close').click(function(){
+          folded.foldUp(30);
+        });
+        Sticker.init('.sub_main .list li');
+        
+
+    }); //finish
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="inner">
+        <h1><a href="index.html">엽기떡볶이</a></h1>
+        <nav>
+          <ul class="manu">
+            <li class="so"><a href="sub.html">회사소개</a>
+              <ul class="hidden">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">브랜드소개</a></li>
+              <li><a href="#">오시는길</a></li>
+            </ul></li>
+            <li class="so"><a href="#">메뉴소개</a>
+              <ul class="hidden">
+                <li><a href="#">엽기메뉴</a></li>
+                <li><a href="#">사이드/음료</a></li>
+                <li><a href="#">토핑</a></li>
+                <li><a href="#">세트메뉴</a></li>
+              </ul></li>
+            <li class="so"><a href="#">매장정보</a>
+              <ul class="hidden">
+                <li><a href="#">엽떡 매장</a></li>
+              </ul></li>
+            <li class="so"><a href="#">고객안내</a>
+              <ul class="hidden">
+                <li><a href="#"> 공지사항</a></li>
+                <li><a href="#">자주하는질문</a></li>
+                <li><a href="#">고객의 소리</a></li>
+              </ul></li>
+            <li class="so"><a href="#">가맹문의</a>
+              <ul class="hidden">
+                <li><a href="#"> 창업절차</a></li>
+                <li><a href="#">창업비용</a></li>
+              </ul></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <label for="search">검색</label><input type="text" id="search" placeholder="검색어를 입력해 주세요.">
+          <button type="button">검색</button>
+        </div><!-- .search -->
+      </div>  
+      </div><!--.inner-->
+    </header>
+    <div class="sub_nav">
+      <div class="inner">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">회사개요</a></li>
+        </ul>
+      </div><!--.inner-->
+    </div><!--.sub_nav-->
+    <div class="sub_main">
+    <div class="inner">
+      <h6>회사소개</h6>
+      <p class="font hot">핫시즈너는 정직함에서 시작합니다.<br>
+        고객에게 감동을 줄 때까지 우리는 계속 나아갈 것입니다.</p>
+        <div class="sub_img">
+            <button type="button" class="open">open</button>
+            <button type="button" class="close">close</button>
+            <div class="paper_wrap">
+              <div class="cover">
+                <div class="paper">
+                  <img src="img/sub.png" alt="">
+                </div>
+              </div>
+              <div class="content">
+                <p>동대문 엽기 떡볶이 환영 합니다.</p>
+              </div>
+            </div>
+          </div>
+        <p class="font txt5"><strong>CEO인사말</strong>
+          고객님께 감사하고, 이웃과 함께하는 핫시즈너가 되겠습니다.<br>
+          우리 핫시즈너의 불닭발땡초동대문엽기떡볶이는  지속적인 변화와 메뉴 개발을 통해<br>
+          고객 여러분께 보다 많은, 보다 나은 즐거움과 감동의 가치를<br>
+           전달하기 위한 노력을 해오고 있습니다.<br>
+          불닭발땡초동대문엽기떡볶이가 추구하는 '생각'은 끊임없이 변화를 추구하며<br>
+          고객 가치와 행복, 맛깔스러운 요리를 제공하는 것입니다.<br>
+          누구나 즐겁게 즐길 수 있는 매운 요리 문화 공간을 선도하고,<br>
+          무엇보다도 고객의 건강과 만족을 최우선 가치로 여기며,<br>
+          떡볶이의 새로운 문화를 선도하는 NO.1 브랜드가 되도록 노력하겠습니다.<br>
+          <span>핫시즈너 대표</span>금교일</p>
+          
+          <ul class="list">
+            <li>
+              <span class="sticker"></span>
+              <span class="sub_font">여비(Yeobi)</span>
+            </li>
+            <li><span class="sticker"></span></li>
+            <li>
+              <span class="sticker"></span>
+              <span class="sub_font">더기(Deogi</span></li>
+          </ul>
+    </div><!--.inner-->
+  </div><!--.sub_main-->
+    <footer>
+      <div class="inner">
+        <div class="footer">
+        <p>회사명:(주)핫시즈 | 사업자등록번호:201-86-13311 | 대표번호:070-7710-8592 | 고객센터:1661-8514</p>
+        <address>본사 : 서울특별시 성동구 성수이로18길 7, HS빌딩 7층</address>
+        <p>COPYRIGHT  BY HOTSEASONER HOT FOOD ALL RIGHTS RESERVEDs</p>
+      </div><!--.footer-->
+      </div><!--.inner-->
+    
+    </footer><!--footer-->
+    <a href="#" class="btn">top</a>
+  </div><!--#wrap-->
+</body>
+</html>
